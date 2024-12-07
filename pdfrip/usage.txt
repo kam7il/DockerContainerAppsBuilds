@@ -1,0 +1,6 @@
+#build
+docker build -t pdfrip-img .
+
+#run
+docker run --rm -it -v ./DockerMounts:/DockerMounts --name pdfrip-d pdfrip-img
+docker run --rm -it -v ./DockerMounts:/DockerMounts --name pdfrip-d pdfrip-img pdfrip -f DockerMounts/pdfsy/file.pdf default-query --max-length 8
