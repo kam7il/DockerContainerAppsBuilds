@@ -12,5 +12,5 @@ RUN apk update && \
 	
 ENTRYPOINT ["/bin/sh"]
 
-#RUN DOCKER
-# docker run --rm -it --volume /DockerMounts/patreon-dl:/download --entrypoint /bin/sh patreon-dl
+# RUN DOCKER
+# docker run --rm -it --volume /DockerMounts/patreon-dl:/download patreon-dl
