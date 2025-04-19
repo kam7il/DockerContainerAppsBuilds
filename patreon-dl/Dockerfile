@@ -8,7 +8,9 @@ RUN apk update && \
 	apk add git && \
 	git clone --depth 1 https://github.com/patrickkfkan/patreon-dl.git ./patreon-dl && \
 	cd ./patreon-dl && \
-	npm i -g patreon-dl
+	npm i -g patreon-dl && \
+	npm cache clean --force && \
+	rm -rf /root/.npm
 
 # ENTRYPOINT ["/bin/sh"]
 # docker run --rm -it --volume /DockerMounts/patreon-dl:/download patreon-dl
